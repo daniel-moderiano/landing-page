@@ -5,37 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../resources/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <title>Product Landing Page</title>
 </head>
 <body>
-    <header id="header" class="header">
-        <!-- Company logo -->
-        <img id="header-image" class="header__image" src="#" alt="#">
-        <!-- Nav-bar with 3 buttons. These will act as 'bookmarks' for navigating the landing page -->
-        <nav id="nav-bar" class="nav-bar">
-            <a class="nav-bar__link nav-link" href="#">Link 1</a>
-            <a class="nav-bar__link nav-link" href="#">Link 2</a>
-            <a class="nav-bar__link nav-link" href="#">Link 3</a>
-        </nav>
-    </header>
+    <div class="page-container">
+        <header id="header" class="header">
+            <!-- Company logo -->
+            <img id="header-image" class="header__image" src="#" alt="#">
+            <!-- Nav-bar with 3 buttons. These will act as 'bookmarks' for navigating the landing page -->
+            <nav id="nav-bar" class="nav-bar">
+                <a class="nav-bar__link nav-link" href="#">Link 1</a>
+                <a class="nav-bar__link nav-link" href="#">Link 2</a>
+                <a class="nav-bar__link nav-link" href="#">Link 3</a>
+            </nav>
+            
+        </header>
 
-    <main>
-        <!-- Embedded video to introduce the product -->
-        <video src="#" id="video" class="video"></video>
+        <main class='main'>
+            <h1 class="title">Main Title</h1>
+            <h2 class="subtitle">Subtitle</h2>
 
-        <!-- Discretionary content here, mainly to include the product itself with pricing, could be multiple price options, testimonials, etc. -->
+            <!-- Small input form to join for free trial. User enters email and submit input renders as button to send data to mock url -->
+            <form id="form" class="form" action="https://www.freecodecamp.com/email-submit">
+                <input id="email" type="email" class="form__input">
+                <label class="form__label" for="email"></label>
+                <input id="submit" class="form__button" type="submit">
+            </form>
+            <p class="form__subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error nemo rerum optio unde ad at quasi vitae possimus quod doloribus, minima, labore omnis blanditiis ea aperiam laudantium praesentium repellendus atque?</p>
 
-        <!-- Small input form to join for newsletter updates. User enters email and submit input renders as button to send data to mock url -->
-        <form id="form" class="form" action="https://www.freecodecamp.com/email-submit">
-            <input id="email" type="email" class="form__input">
-            <label class="form__label" for="email"></label>
-            <input id="submit" class="form__button" type="submit">
-        </form>
-    </main>
+            <!-- Embedded video to introduce the product -->
+            <video src="#" id="video" class="video"></video>
 
-    <footer class="footer">
-        <!-- Consider a basic copyright or some links about contact/privacy/FAQs etc. -->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit delectus blanditiis sint fugit sapiente sed consequuntur vitae porro! Error, deserunt obcaecati. Dolorum laudantium quidem veritatis sunt alias modi. Amet, laborum.</p>
-    </footer>
+            <!-- Discretionary content here, mainly to include the product itself with pricing, could be multiple price options, testimonials, etc. Can use flexbox to arrange these within a container div though realistically I'd want to use CSS grid here -->
+            <div class="info-block">
+                <div class="info-block__feature-block">
+                    <img class="info-block__image" src="#" alt="#">
+                    <h3 class="info-block__heading"></h3>
+                    <p class="info-block__content"></p>
+                </div>
+                <div class="info-block__feature-block">
+                    <img class="info-block__image" src="#" alt="#">
+                    <h3 class="info-block__heading"></h3>
+                    <p class="info-block__content"></p>
+                </div>
+                <div class="info-block__feature-block">
+                    <img class="info-block__image" src="#" alt="#">
+                    <h3 class="info-block__heading"></h3>
+                    <p class="info-block__content"></p>
+                </div>
+            </div>
+            
+            <!-- Testimonial to conclude page, with quote and then small citation text underneath -->
+            <div class="testimonial">
+                <p class="testimonial__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde totam ab placeat, qui voluptate, ad quisquam error atque quibusdam sapiente voluptatibus aspernatur reiciendis veniam dolore explicabo magnam magni dolor est!</p>
+                <p class="testimonial__citation">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi ipsam saepe soluta beatae? Perspiciatis id quae, enim asperiores, dolorum animi ipsam delectus tenetur ab quos, minima voluptates ut. Nulla, eos.</p>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <!-- Consider a basic footer with some links about contact/privacy/FAQs etc. -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit delectus blanditiis sint fugit sapiente sed consequuntur vitae porro! Error, deserunt obcaecati. Dolorum laudantium quidem veritatis sunt alias modi. Amet, laborum.</p>
+        </footer>
+    </div>
 </body>
 </html>
