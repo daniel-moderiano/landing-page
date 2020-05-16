@@ -5,3 +5,123 @@ body {
     font-weight: 400;
     /* background-color: #9bc4cb; */
 }
+
+/* HEADER AND NAV BAR */
+
+.header {
+    margin: 0 auto;
+}
+
+.header__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 50%;
+    padding: 1em 0;
+}
+
+.nav-bar {
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(143, 210, 255);
+    justify-content: center;
+    
+}
+
+.nav-bar__link {
+    padding: 0 3em;
+    color: black;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+.nav-bar__link:hover {
+    color: rgb(238, 221, 165);
+    text-decoration: underline;
+}
+
+.nav-bar__link--about {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+/*  MAIN TITLES */
+
+.title {
+    text-align: center;
+
+}
+
+
+.title__main {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0.5em 0;
+}
+
+.title__subtitle {
+    font-size: 1.3em;
+}
+
+
+/* Flex-container. The flex property enables the flex context for all the direct children. Row direction sets the blocks horizontally next to one another. No wrap is required. */
+.info-block {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+
+}
+
+
+.info-block__image {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* EMAIL SUBMISSION FORM */
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.form__button {
+    background-color: rgb(7, 85, 150);
+    border-radius: 2px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    height: 2em;
+    width: 8em;
+
+}
+
+/* Need to review this considerably - how to match height with submit button and how to remove the default border */
+.form__input {
+    height: 1.95em;
+    margin-right: 1em;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    font-size: 0.9em;
+
+}
+
+.description {
+    text-align: center;
+}

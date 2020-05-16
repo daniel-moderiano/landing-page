@@ -12,27 +12,34 @@
     <div class="page-container">
         <header id="header" class="header">
             <!-- Company logo -->
-            <img id="header-image" class="header__image" src="#" alt="#">
+            <img id="header-image" class="header__image" src="images/header.png" alt="Contact Lens Centre banner with eye picture and the words 'Contact Lens Centre'">
             <!-- Nav-bar with 3 buttons. These will act as 'bookmarks' for navigating the landing page -->
             <nav id="nav-bar" class="nav-bar">
-                <a class="nav-bar__link nav-link" href="#">Link 1</a>
-                <a class="nav-bar__link nav-link" href="#">Link 2</a>
-                <a class="nav-bar__link nav-link" href="#">Link 3</a>
+                <a class="nav-bar__link nav-bar__link--home" href="#">Home</a>
+                <a class="nav-bar__link nav-bar__link--about" href="#">About</a>
+                <a class="nav-bar__link nav-bar__link--contact" href="#">Contact</a>
             </nav>
             
         </header>
 
         <main class='main'>
-            <h1 class="title">Main Title</h1>
-            <h2 class="subtitle">Subtitle</h2>
+            <div class="title">
+                <h1 class="title__main">Introducing the EvoFit Lens</h1>
+                <h2 class="title__subtitle">A state-of-the-art new lens design offering crisp vision to those with high prescriptions</h2>
+
+            </div>
+          
 
             <!-- Small input form to join for free trial. User enters email and submit input renders as button to send data to mock url -->
             <form id="form" class="form" action="https://www.freecodecamp.com/email-submit">
-                <input id="email" type="email" class="form__input">
+                <input id="email" type="email" class="form__input" placeholder="Enter an email">
                 <label class="form__label" for="email"></label>
                 <input id="submit" class="form__button" type="submit">
             </form>
-            <p class="form__subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error nemo rerum optio unde ad at quasi vitae possimus quod doloribus, minima, labore omnis blanditiis ea aperiam laudantium praesentium repellendus atque?</p>
+            <div class='description'>
+                <p class="description__content">Sign up to receive a free 1-week trial set of EvoFit contact lenses!</p>
+            </div>
+            
 
             <!-- Embedded video to introduce the product -->
             <video src="#" id="video" class="video"></video>
@@ -40,17 +47,17 @@
             <!-- Discretionary content here, mainly to include the product itself with pricing, could be multiple price options, testimonials, etc. Can use flexbox to arrange these within a container div though realistically I'd want to use CSS grid here -->
             <div class="info-block">
                 <div class="info-block__feature-block">
-                    <img class="info-block__image" src="#" alt="#">
+                    <img class="info-block__image" src="images/eye.png" alt="Photo of blue human eye">
                     <h3 class="info-block__heading"></h3>
                     <p class="info-block__content"></p>
                 </div>
                 <div class="info-block__feature-block">
-                    <img class="info-block__image" src="#" alt="#">
+                    <img class="info-block__image" src="images/lens.png" alt="Photo of hi-tech camera lens">
                     <h3 class="info-block__heading"></h3>
                     <p class="info-block__content"></p>
                 </div>
                 <div class="info-block__feature-block">
-                    <img class="info-block__image" src="#" alt="#">
+                    <img class="info-block__image" src="images/cleaning.png" alt="Photo of contact lens case and cleaning solution held above">
                     <h3 class="info-block__heading"></h3>
                     <p class="info-block__content"></p>
                 </div>
