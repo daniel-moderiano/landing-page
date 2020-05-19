@@ -1,9 +1,17 @@
+
+
 body {
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
     line-height: 1.5em;
     font-weight: 400;
     /* background-color: #9bc4cb; */
+
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* HEADER AND NAV BAR */
@@ -94,34 +102,81 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top: 2em;
+    padding: 1em 0;
+    font-size: 1em;
+    height: 3em;
+    align-items: stretch;
+    line-height: 1.5em;
 }
+
+/* Form items don't inherit parent parameters like fonts or box-sizing, so these must be added individually to each item */
 
 .form__button {
     background-color: rgb(7, 85, 150);
-    border-radius: 2px;
+    border-radius: 5px;
     border: none;
     color: white;
-    font-size: 1em;
+    font-size: inherit;
     font-family: 'Open Sans', sans-serif;
-    height: 2em;
-    width: 8em;
-
+    height: 100%;
+    width: 150px;
+    line-height: inherit;
+    font-weight: bold;
+    box-sizing: border-box;
+  
 }
 
 /* Need to review this considerably - how to match height with submit button and how to remove the default border */
 .form__input {
-    height: 1.95em;
+    height: 100%;
+    width: 300px;
     margin-right: 1em;
     font-family: 'Open Sans', sans-serif;
-    border-radius: 3px;
+    border-radius: 5px;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(151, 151, 151);
     border-width: 1px;
-    font-size: 0.9em;
+    font-size: inherit;
+ 
+    box-sizing: border-box;
 
+}
+
+.form__input:focus {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(7, 85, 150);
+    border-width: 1px;
+    outline: none;
+    box-shadow: 0 0 1px rgb(7, 85, 150);
+}
+
+.form__button:hover {
+    background-color: rgb(28, 40, 112);
+    box-shadow: 0 0 5px gray;
+    /* transition: 150ms ease; */
+    transition-property: background-color, border-color, box-shadow, color;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: background-color, box-shadow;
+    cursor: pointer;
+    
 }
 
 .description {
     text-align: center;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

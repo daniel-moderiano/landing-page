@@ -32,9 +32,11 @@
 
             <!-- Small input form to join for free trial. User enters email and submit input renders as button to send data to mock url -->
             <form id="form" class="form" action="https://www.freecodecamp.com/email-submit">
-                <input id="email" type="email" class="form__input" placeholder="Enter an email">
-                <label class="form__label" for="email"></label>
-                <input id="submit" class="form__button" type="submit">
+                <fieldset>
+                    <input id="email" type="email" class="form__input" placeholder="Enter your email address">
+                    <label class="form__label" for="email"></label>
+                    <input id="submit" class="form__button" type="submit">
+                </fieldset>
             </form>
             <div class='description'>
                 <p class="description__content">Sign up to receive a free 1-week trial set of EvoFit contact lenses!</p>
@@ -42,8 +44,11 @@
             
 
             <!-- Embedded video to introduce the product -->
-            <video src="#" id="video" class="video"></video>
-
+            <!-- <video id="video" class="video" src="videos/contacts.mp4" controls></video> -->
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/M1UrPVARtu0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video-wrapper__video"></iframe>
+            </div>
+            
             <!-- Discretionary content here, mainly to include the product itself with pricing, could be multiple price options, testimonials, etc. Can use flexbox to arrange these within a container div though realistically I'd want to use CSS grid here -->
             <div class="info-block">
                 <div class="info-block__feature-block">
