@@ -6,13 +6,42 @@ body {
     line-height: 1.5em;
     font-weight: 400;
     /* background-color: #9bc4cb; */
-
 }
 
 main {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* text-align: center; */
+    position: relative;
 }
+
+.video-wrapper {
+    width: 80%;
+    max-width: 640px;
+    margin: 0 auto;
+  
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 /* HEADER AND NAV BAR */
 
@@ -37,7 +66,6 @@ main {
     flex-direction: row;
     background-color: rgb(143, 210, 255);
     justify-content: center;
-    
 }
 
 .nav-bar__link {
@@ -48,6 +76,7 @@ main {
 }
 
 .nav-bar__link:hover {
+    /* Need to look at appropriate colours for this */
     color: rgb(238, 221, 165);
     text-decoration: underline;
 }
@@ -57,13 +86,12 @@ main {
     border-right: 2px solid black;
 }
 
+
 /*  MAIN TITLES */
 
 .title {
     text-align: center;
-
 }
-
 
 .title__main {
     font-size: 3em;
@@ -75,24 +103,32 @@ main {
     font-size: 1.3em;
 }
 
+/* INFO BLOCKS */
 
-/* Flex-container. The flex property enables the flex context for all the direct children. Row direction sets the blocks horizontally next to one another. No wrap is required. */
-.info-block {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
+/* CSS Grid going to be used to style this section, expect to use a 3x3 grid to split the images into one row and the info into another row. */
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: 200px 200px 200px;
+    row-gap: 1em;
+    column-gap: 3em;
+    justify-items: start;
+    align-items: center;
+    /* width: 100%; */
     margin: 0 auto;
-    justify-content: space-evenly;
-
+    padding: 2em 0;
 }
 
-
-.info-block__image {
-    display: block;
-    width: 80%;
+.grid__item--image {
+    width: 100%;
     height: auto;
-    margin: 0 auto;
+    order: 1;
 }
+
+.grid__item--heading { order: 2; }
+
+.grid__item--description { order: 3; }
+
 
 
 /* EMAIL SUBMISSION FORM */
@@ -123,10 +159,8 @@ main {
     line-height: inherit;
     font-weight: bold;
     box-sizing: border-box;
-  
 }
 
-/* Need to review this considerably - how to match height with submit button and how to remove the default border */
 .form__input {
     height: 100%;
     width: 300px;
@@ -137,9 +171,7 @@ main {
     border-color: rgb(151, 151, 151);
     border-width: 1px;
     font-size: inherit;
- 
     box-sizing: border-box;
-
 }
 
 .form__input:focus {
@@ -160,23 +192,59 @@ main {
     transition-timing-function: ease;
     transition-delay: 0s;
     transition-property: background-color, box-shadow;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
 .description {
     text-align: center;
 }
 
+/* VIDEO STYLING */
+
 .video-wrapper {
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    position: relative;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
 }
 
 .video-wrapper iframe {
-    position: absolute;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* TESTIMONIAL */
+
+.testimonial {
+    text-align: center;
+}
+
+.testimonial__content {
+    font-style: italic;
+}
+
+.testimonial__citation {
+    color: gray;
+    font-size: 0.75em;
+}
+
+/* FOOTER */
+
+.footer {
+    margin: 0 auto;
+    padding: 1em 0;
     width: 100%;
-    height: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: right;
+    background-color: rgb(143, 210, 255);
+}
+
+.footer__link {
+    padding-right: 1em;
 }
