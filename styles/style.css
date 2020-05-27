@@ -241,12 +241,20 @@ main {
     margin: 2em auto 0 auto;
     padding: 1em 0;
     width: 100%;
-    text-align: right;
+    text-align: center;
     background-color: rgb(143, 210, 255);
 }
 
 .footer__link {
-    padding-right: 1em;
+    padding: 0 0.5em;
+    color: black;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    /* Need to look at appropriate colours for this */
+    color: rgb(0, 23, 99);
+    text-decoration: underline;
 }
 
 /* RESPONSIVE DESIGN */
