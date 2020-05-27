@@ -9,6 +9,7 @@ body {
     min-height: 100%;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 main {
@@ -34,6 +35,7 @@ main {
     height: auto;
     width: 50%;
     padding: 1em 0;
+    max-width: 950px;
 }
 
 .nav-bar {
@@ -55,7 +57,7 @@ main {
 
 .nav-bar__link:hover {
     /* Need to look at appropriate colours for this */
-    color: rgb(238, 221, 165);
+    color: rgb(0, 23, 99);
     text-decoration: underline;
 }
 
@@ -74,11 +76,13 @@ main {
 .title__main {
     font-size: 3em;
     font-weight: bold;
-    padding: 0.5em 0;
+    padding: 1.0em 0 0.5em 0;
+    line-height: 1em;
 }
 
 .title__subtitle {
     font-size: 1.3em;
+    padding-bottom: 2em;
 }
 
 /* INFO BLOCKS */
@@ -103,7 +107,10 @@ main {
     order: 1;
 }
 
-.grid__item--heading { order: 2; }
+.grid__item--heading { 
+    order: 2; 
+    font-weight: bold;
+}
 
 .grid__item--description { order: 3; }
 
@@ -122,6 +129,8 @@ main {
     align-items: stretch;
     line-height: 1.5em;
 }
+
+
 
 /* Form items don't inherit parent parameters like fonts or box-sizing, so these must be added individually to each item */
 
@@ -150,6 +159,7 @@ main {
     border-width: 1px;
     font-size: inherit;
     box-sizing: border-box;
+    padding: 1em;
 }
 
 .form__input:focus {
@@ -162,7 +172,7 @@ main {
 }
 
 .form__button:hover {
-    background-color: rgb(28, 40, 112);
+    background-color: rgb(0, 23, 99);
     box-shadow: 0 0 5px gray;
     /* transition: 150ms ease; */
     transition-property: background-color, border-color, box-shadow, color;
@@ -175,6 +185,7 @@ main {
 
 .description {
     text-align: center;
+    font-size: 1.3em;
 }
 
 /* VIDEO AND IFRAME STYLING */
@@ -182,9 +193,11 @@ main {
 /* Among various solutions proposed online, this was the most effective ing iving full control ove riframe size while maintaining responsivity. */
 
 .video-wrapper {
-    width: 80%;
-    max-width: 1280px;
+    width: 100%;
+    max-width: 696px;
     margin: 0 auto;
+    /* padding: 1em 0; */
+    margin-top: 1em;
 }
 
 .video-container {
@@ -209,6 +222,8 @@ main {
 
 .testimonial {
     text-align: center;
+    max-width: 696px;
+    align-self: center;
 }
 
 .testimonial__content {
@@ -223,7 +238,7 @@ main {
 /* FOOTER */
 
 .footer {
-    margin: 0 auto;
+    margin: 2em auto 0 auto;
     padding: 1em 0;
     width: 100%;
     text-align: right;
@@ -233,3 +248,96 @@ main {
 .footer__link {
     padding-right: 1em;
 }
+
+/* RESPONSIVE DESIGN */
+
+/* Breakpoint exists at 870px where everything shrinks except grid. This first rule exists to say "use this styling up until the width reaches the maxximum alloweed of 870px." */
+
+@media screen and (max-width: 870px) {
+    .grid-container {
+        grid-template-columns: auto;
+        max-width: 300px;
+        justify-items: center;
+    }
+
+    .grid__item--image {
+        width: 200px;
+        height: auto;
+        order: 1; 
+    }
+    
+    .grid__item--heading { 
+        order: 1; 
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .grid__item--description { 
+        order: 1;
+        padding-bottom: 1.5em; 
+        text-align: center;
+    }
+
+    .title__main {
+        font-size: 2.5em;
+    }
+    
+    .title__subtitle {
+        font-size: 1.2em;
+    }
+
+    .description {
+        font-size: 1.2em;
+    }
+
+    .nav-bar__link {
+        font-size: 1em;
+        padding: 0 1.5em;
+    }
+
+    .nav-bar {
+        padding: 0.5em 0;
+    }
+
+    .header__image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: 70%;
+        padding: 1em 0;
+    }
+}
+
+/* Preventing form from breaking */
+
+@media screen and (max-width: 608px) {
+    .form__button {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    .form__input {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    .form__controls {
+        width: 100%;
+    }
+
+    .video-wrapper {
+        margin-top: 4.5em;
+    }
+
+    .header__image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: 100%;
+        padding: 1em 0;
+    }
+}
+
+
