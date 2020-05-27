@@ -6,6 +6,9 @@ body {
     line-height: 1.5em;
     font-weight: 400;
     /* background-color: #9bc4cb; */
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 main {
@@ -17,31 +20,6 @@ main {
     /* text-align: center; */
     position: relative;
 }
-
-.video-wrapper {
-    width: 80%;
-    max-width: 640px;
-    margin: 0 auto;
-  
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
 
 /* HEADER AND NAV BAR */
 
@@ -199,23 +177,33 @@ main {
     text-align: center;
 }
 
-/* VIDEO STYLING */
+/* VIDEO AND IFRAME STYLING */
+
+/* Among various solutions proposed online, this was the most effective ing iving full control ove riframe size while maintaining responsivity. */
 
 .video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-.video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 /* TESTIMONIAL */
 
@@ -238,9 +226,6 @@ main {
     margin: 0 auto;
     padding: 1em 0;
     width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     text-align: right;
     background-color: rgb(143, 210, 255);
 }
